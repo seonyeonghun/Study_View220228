@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>widmice</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+	integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- <script src="https://kit.fontawesome.com/092cd77c22.js" crossorigin="anonymous"></script> -->	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<h1 class="d-none">widmice</h1>
+	<!-- header+section#main+footer : Emmet Syntax (CSS 선택자) -->
+	<header>
+		<div class="wrap-outer">
+			<div class="header-wrap">
+				<div class="header-logo">
+					<a href="#"> <img src="images/logo.png" alt="위드마이스">
+					</a>
+				</div>
+				<nav class="only-pc">
+					<ul id="gnb">
+						<li><a href="#">company</a></li>
+						<li><a href="#">business area</a></li>
+						<li><a href="#">portfolio</a></li>
+						<li><a href="#">contact us</a></li>
+					</ul>
+				</nav>
+				<ul class="member only-pc">
+					<li><a href="#">my menu</a></li>
+					<li><a href="#">login</a></li>
+				</ul>
+				<div id="burger" class="d-none">
+					<span class="material-icons">
+						menu
+					</span>
+				</div>
+			</div>
+			<!-- /.header-wrap -->
+		</div>
+		<!-- /.wrap-outer -->
+	</header>
+	<div class="hero">
+		<div class="hero-wrap">
+			<div class="text">
+				<h2><span>wid</span>mice</h2>
+				<p>
+					최고의 파트너쉽과<br>품격있는 서비스!
+				</p>
+			</div>
+			<div class="balloon">
+				<img src="images/visual_img.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<section id="main">
+		<h2 class="d-none">본문</h2>
+		<div class="article-wrap">
+			<article>
+				<h3>company</h3>
+				<div class="flight-desc">
+					<div class="flight">
+						<img src="images/co_img.png" alt="">
+					</div>
+					<div class="desc">
+						<p>
+							<span>위드마이스는</span> Meeting, Incentive, Convention, Exhibition 등 각
+							분야의 전문가들이 모인 MICE 기업으로써 매번 업데이트 된 프로그램으로 고객들에게 품격 있는 서비스를 제공하고
+							있습니다.
+						</p>
+					</div>
+					<div class="bg-city">
+						<p class="d-none">위드마이스, widmice</p>
+					</div>
+					<div class="bg-poly">
+						<p class="d-none">위드마이스, widmice</p>
+					</div>
+					<div id="down_pdf" class="only-mobile">
+						<a href="./company-intro.pdf" download>
+							회사 소개서 <span class="material-icons circle">
+											keyboard_double_arrow_down
+										</span>
+						</a>
+					</div>
+				</div>
+			</article>
+		</div>
+		<!-- /.article-wrap -->
+		<div class="wrap-outer">
+			<div class="article-wrap">
+				<article>
+					<h3>business</h3>
+					<!-- ul>li*3>img+p -->
+					<ul class="categories">
+						<li><img src="images/busimg1.jpg" alt="flight, hotel">
+							<p>flight &amp; hotel</p></li>
+						<li><img src="images/busimg2.jpg" alt="convention">
+							<p>convention</p></li>
+						<li><img src="images/busimg3.jpg" alt="promotion">
+							<p>promotion</p></li>
+					</ul>
+					<button id="top_btn">
+						<span class="material-icons">
+							vertical_align_top
+						</span>
+					</button>
+				</article>
+			</div>
+		</div>
+		<!-- /.wrap-outer -->
+	</section>
+	<aside id="side">
+		<div id="close">
+			<span class="material-icons">
+				close
+			</span>
+		</div>
+		<nav>
+			<ul id="m_gnb">
+				<li><a href="#">company</a></li>
+				<li><a href="#">business area</a></li>
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">contact us</a></li>
+			</ul>
+		</nav>
+		<ul class="m_member">
+			<li><a href="#">my menu</a></li>
+			<li><a href="#">login</a></li>
+		</ul>
+	</aside>	
+	<footer>
+		<div class="footer-wrap">
+			<div class="bottom-logo">
+				<a href="#"> <img src="images/footer_logo.png" alt="위드마이스">
+				</a>
+			</div>
+			<address>
+				<p>(주)위드마이스 대표자 : 강정환, 이윤아 주소 : 광주 서구 경열로 3 고객센터 : 062-1234-5678
+					개인정보관리책임자 : 홍길동</p>
+				<p>copyright&copy; wid mice all rights reserved.</p>
+			</address>
+		</div>
+	</footer>
+	<script>
+		// 버거메뉴 클릭하면, 사이드 메뉴 right: 0으로 세팅
+		const MOBILE = document.querySelector("#burger"); // 문서에서 #burger 찾아라
+		const CLOSE = document.querySelector("#close"); // 문서에서 #close 찾아라
+		const SIDE = document.querySelector("#side"); // 문서에서 #side 찾아라
+		const BODY = document.querySelector("body"); // 문서에서 body 찾아라
+		
+		MOBILE.addEventListener("click", sideIN); // 클릭하면, sideIN 함수 호출
+		CLOSE.addEventListener("click", sideOUT); // 클릭하면, sideOUT 함수 호출
+		
+		function sideIN(){ // document (문서) style 속성을 값 조작
+			SIDE.style.right = "0";
+			BODY.style.overflow = "hidden";
+		}
+		
+		function sideOUT(){ // document (문서) style 속성을 값 조작
+			SIDE.style.right = "-100%"; /* 실제 크기를 알면, 반영 */
+			BODY.style.overflow = "auto";
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

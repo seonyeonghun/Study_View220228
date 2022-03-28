@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+html {
+	scroll-behavior: smooth; /* 스크롤-액션 : 부드럽게 이동 */
+}
+
+body {
+	font-family: "Nanum Gothic", sans-serif
+	/* 글꼴 : 나눔고딕, (아무나)고딕스럽게 */
+}
+
+a, a:link {
+	/* reset.css 에서 빠졌다면, 직접 작성 */
+	text-decoration: none;
+	color: inherit;	
+}
+
+.d-none {
+	display: none;
+	color: red;
+}
+
+/* =========== google material icon ===============*/
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* ============= end ===============================*/
+
+.popup {
+	width: 300px;
+	height: 400px;
+	position: absolute;
+	
+}
+#news1 {
+	left: 20%;
+	top: 10%;
+	background: gold;
+	z-index: 10; /* font-weight: 100, 200,300,...900 vs bolder */
+}
+#btn-close {
+	position: absolute;
+	font-size: 2rem;
+	right: 5%;
+	top: 5%;
+	background: #000;
+	color: #fff;
+	padding: 15px;
+}
+#news2 { /* HTML의 태그를 보면, news2가 news1보다 늦게 (나중에, 최근에) 작성했고 */
+	background: brown;
+	left: 30%;
+	top: 10%;
+}
+
+.site-logo {
+	width: 154px;
+	height: 152px;
+	margin: 0 auto
+}
+
+#key.visual { /* 이미지가 인라인 요소라서, 높이가 실제보다 차이가 발생 */
+	height: 335px;
+	overflow: hidden; /* (내용이)넘침 : (내용을) 숨김 */
+}
+
+.nav {
+	color: white;
+}
+.bg-dark {
+	background: #000;	
+}
+.bg-none {
+	background: none; /* 별도의 배경 지정이 없다면, white가 기본 */
+}
+.bg-gray {
+	background: #fafafa;
+}
+.text-white {
+	color: white;
+}
+.text-center {
+	text-align: center;
+}
+.py-5 { /* padding y-axis : y축으로 적용하는 padding (기본값 5배:여유있게~) */
+	padding: 5rem 0;
+}
+/* .my-5 {
+	margin-top: 5rem !important;
+	margin-bottom: 5rem !important;
+} */
+.upper {
+	text-transform: uppercase; /* 사이트명, 브랜드명, 트레이드마크...등등 대문자로 표기할 것 */
+}
+
+#gnb {
+	text-align: center;
+}
+
+#gnb > li {
+	display: inline-block;
+	margin: 15px 20px;
+	position: relative; /* 새로운 absolute 요소의 (상대적인) 기준점 */
+}
+
+#gnb > li:hover { /* 마우스 오버하면, 텍스트 컬러 변경->a의 컬러 결정 */
+	color: #01ccff;
+}
+
+#gnb > li:hover .lnb{ /* li 요소에 마우스를 오버했을때(hand+over) */
+	display: block;
+}
+
+.lnb { /* 처음에는 감췄다가, 마우스 오버시 노출 */
+	display: none;
+	position: absolute; /* 절대적인 위치 : body 전체 기준 */
+	top: 100%; /* top에서 반대방향(bottom)으로 10픽셀 만큼 이격 */
+	left: -30px;
+	background: #000;
+	padding: 10px 20px;
+	width: 100%;
+}
+
+/* ============= fee, cast table ============= */
+table, th, td{
+	border: 1px solid #333;
+	border-collapse: collapse;	
+}
+th, td {
+	text-align: center;
+	vertical-align: middle; /* table, inline 요소에만 적용, 수직정렬 속성 */
+	padding: 15px 0;
+}
+
+.warn {
+	background: #ff5b5b;
+}
+
+.row-header th {
+	background: #e4e4e4;
+}
+
+.fee, .cast {
+	width: 800px;
+	margin: 50px auto 30px; /* 공간을 여유있게 스타일 */
+}
+.fee th, .cast th {
+	width: 200px; /* (200px / 800px) x 100% = 25% */
+	font-weight: bolder; /* 텍스트-굵기 : 더 두껍게 */
+}
+.fee caption, .cast caption {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bolder;
+	margin: 0 0 20px 0; /* 아래만 20px 마진 적용 */
+}
+.cast td {
+	text-align: left;
+	text-indent: 20px; /* 텍스트-들여쓰기 : (오른쪽으로) 20픽셀 만큼 */
+}
+
+/* ============== about page ==================== */
+.container {
+	width: 1190px; /* 가로 폭 : 1190이야! */
+	height: auto; /* 기본 높이 : 내용이나 자식요소의 높이 합(=자동측정) */
+	margin: 3rem auto;
+	/* overflow: hidden; clearfix와 동일한 역할이지만,.. 비교!! */	
+	display: flow-root; /* WD : 표준으로 만들고 있음..언제될지는?? */
+}
+.container::after { /* clearFix 기법 */
+	content: '';
+	display: block;
+	clear: both; /* float : left, float:right 했을때 동시에 left, right 처리 (원상태로 돌리기) */
+}
+.big-text {
+	font-size: 1.125rem; /* 16px x 1.125 = 18px */
+}
+.text-title { /* p.339 float 속성과 clear 속성 */
+	float: left;
+	margin-right: 5%; /* 전체 크기의 5% : 1190 x 0.05 = ??? px */
+	width: 15%;
+	position: relative;
+}
+.text-title::before { /* 가상요소 선택자 ::before vs ::after */
+	content: ''; /* 내용 : 없음 */
+	display: block; /* 표시 : 블럭요소로 */
+	position: absolute; /* 절대위치로 지정! */
+	left: 0;
+	top: -3px; /* 음수값 : 그 방향으로~ 이동시켜 */
+	width: 50px; /* 가로폭 : 50px */
+	height: 2px; /* 높이 : 1px */
+	background: #000; /* 검정색 배경 */
+}
+.text-group {
+	float: left;
+	width: 80%;	
+}
+.line-height16 {
+	line-height: 1.6; /* 행간(줄과 줄사이 간격) vs 자간(=글자 사이사이 간격) */
+}
+/* float를 적용하더라도 100% 초과하는 폭을 적용하면, 컬럼이 내려감!*/
+
+/* ============== casting page ==================== */
+/*
+	box-model : HTML 태그를 BOX로 보는 방식
+	1) margin
+	2) padding
+	3) border
+	※ 방향 : -top, -right, -bottom, -left
+*/	
+.b-bottom {
+	border-bottom: 1px solid #333;
+}
+.list-icons {
+	float: right;
+}
+
+.casting-thumb {
+	width: 527px;
+	float: left;
+	margin-right: 63px; /* 527 + 63 = 590 */
+}
+.casting-desc {
+	float: left;
+	width: 600px; /* 600 + 590 = 1190 */
+}
+.desc-title {
+	background: #4249EA;
+	width: 120px;
+	height: 40px;
+	line-height: 40px; /* 행-높이 : (높이값과 동일하게?) */
+	color: white;
+	text-align: center;
+	border-radius: 30px;
+}
+.desc-title + p { /* .desc-title 다음에 오는 형제 p를 선택 */
+	line-height: 30px;
+	margin: 20px 0;
+}
+.sns-icons {
+	display: flex; /* 아직, 모든 브라우저가 지원하진 않음 */
+	display: -ms-flex; /* 2022. 6 이후부터는 IE 10/11 서비스 중지 */
+	column-gap: 20px; /* 여백, (공간)차이 */
+}
+
+/* ============== xnb =============== */
+
+#xnb {
+	text-align: center;	
+}
+#xnb > li {
+	display: inline-block;
+	margin: 10px 15px;
+	color: #666;
+}
+.border-top {
+	border-top: 1px solid #ddd;
+}
+
+
+/* =============== 맨위로 ============ */
+.move-top {
+	position: fixed; /* fixed : 모니터 기준 */
+	right: 5%;
+	bottom: 10%;
+	border: 1px solid #333; /* 테두리 선 : -top, -right, bottom, left */
+	padding: 15px;
+	background: rgba(255,255,255,.5); /* 흰색 50% 투명하게 */
+}
+
+
+
+
+
+
+

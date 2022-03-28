@@ -1,0 +1,128 @@
+
+  :: vendor prefix
+
+   - 브라우저 제조사 마다 갖고있는 어떤 표준 vs 세계 표준
+    차이로 인해서 제대로 구현되지 않는 일부 최신 속성
+
+   ex> transform: ...
+       transition:
+       animation: ...
+
+   I. 수동 prefix
+
+     css에서 표준 속성과 prefix 붙이는 속성으로 구분
+
+     .clock {
+          
+          -webkit-transform: rotate(180deg)
+          -moz-transform: rotate(180deg)
+          -ms-transform: rotate(180deg)
+          -o-transform: rotate(180deg)
+          transform: rotate(180deg)        /* 표준속성 */
+
+       }
+
+
+  II. 자동 prefix
+
+     1) online auto prefix service
+
+     2) prefix free [js library]
+
+        http://projects.verou.me/prefixfree/
+
+
+    :: 미디어 쿼리(Media Query)
+ 
+     - p.347 ~
+
+    미디어 및 화면 크기에 따라 다른 스타일 시트가 적용되게 하는 것
+
+    미디어 쿼리가 없다면 화면의 크기, 미디어 종류에 모두 만족하지 못함.
+
+    ※ </head> 앞에 media 를 감지하는 태그요소를 첨부
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     1) 디바이스 다양해짐
+
+     2) 스크린 크기 : 11,12,12.5 ~ 14 inch? (노트북?!)
+
+     ※ 노트북 13인치~
+
+        크롬북 11~12인치
+
+
+    I. 수동 모든 디바이스와 화면크기에 맞추겠다!!
+
+      미디어 쿼리 써야 함.
+
+
+     (1) 미디어 쿼리문 ==> 반응형(Responsive)   vs  적응형(Adaptive) : 네이버 vs 네이버 모바일
+
+       1) HTML 
+
+         <link rel="stylesheet" rel="css/style.css">
+         <link rel="stylesheet" rel="css/mobile.css" media="screen and (max-width: 768px)">
+
+       2) CSS : 권장방법
+       /* ========= style.css ========= */
+
+       /* ========= media query ======= */
+
+       @media screen and (max-width: 768px) {  /* break-point : 중단점, 종단점 */
+
+          선택자1 { /* 태블릿 크기라면 */
+                  스타일 속성: 속성값;
+             }
+
+          선택자2 { /* 태블릿 크기라면 */
+                  스타일 속성: 속성값;
+             }
+        }
+
+     
+     ※ </head> 앞, CSS를 위한 구문
+
+
+
+
+
+
+
+   II. 자동으로 알아서, UI FRAMEWORK (프레임워크) 사용!
+
+      - Bootstrap (v4.x.x ~ v5.x.x)
+
+      - tailwindCSS
+
+      - pureCSS
+
+      - Foundation
+
+      ※ 검색하면 엄청난 정보가...키워드 : ui (css) framework
+   
+
+	http://192.168.0.44:8080/studyhtml5/06.dior
+
+
+  	<script>
+		alert(screen.availWidth+" / "+screenAvailHeight);
+        </script>
+       </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

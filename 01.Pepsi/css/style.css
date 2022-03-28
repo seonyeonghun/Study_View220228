@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none; /* 텍스트-꾸밈 : (밑줄)안함 */
+	color: inherit; /* 색상 : (상속받아서 결정해) */
+}
+.d-none {
+	display: none; /* 구조적으로 필요하나, 시각적으로는 불필요해서 숨김 */
+}
+.logo { /* 클래스 이름이 logo인 것의 스타일을 아래와 같이 적용 */
+	width: 100px;
+	height: 110px;
+	text-align: center;
+	margin: 50px auto;
+}
+
+.menu { /* li의 부모 */
+	background: #005891; /* HEX, rgb, rgba, hsla,...색상모드 */
+	text-align: center;	
+	margin: 0 0 50px;
+	color: white;
+}
+
+.menu li { /* .menu의 자손(=자식) */
+	padding: 20px 0;
+	display: inline-block;
+	margin: 0 10px
+}
+.visual {
+	width: 800px;
+	height: 500px;
+	margin: 0 auto; /* top, left/right, bottom 방향 마진 */
+}
+.title-text {
+	text-align: center;
+	text-transform: uppercase; /* 텍스트-변형: 대문자로 */
+	margin: 50px 0 0 0;
+	font-size: 22px; /* 글꼴-크기 : 22픽셀(절대값) */
+}
+.title-desc {
+	color: #555555;
+	font-size: 16px;
+	text-align: center;
+	margin: 5px 0 15px 0; /* top right bottom left 순서로 마진추가 */
+}
+.movies {
+	text-align: center;
+	font-size: 0; /* 글꼴-크기 : 0 (있는거 없앰..사라짐) */
+}
+.movies li {
+	display: inline-block;
+}
+#sns {
+	text-align: center;
+	margin: 20px 0;
+}
+#sns li {
+	display: inline-block;
+	margin: 0 5px
+}
+
+.cs-title {
+	font-size: 15px;
+	color: #005891; /* rgba, HEX, color name */
+	text-align: center; /* 텍스트-정렬: (수평)중앙 */
+	text-transform: uppercase; /* 텍스트-변형 : (소문자를)대문자 */
+}
+.phone {
+	font-size: 30px;
+	color: #005891;
+	font-weight: bold; /* 글꼴-두께 : 두껍게 */
+	text-align: center; /* 텍스트-정렬: (수평)중앙 */
+}
+hr {
+	border-color: #005891; /* 테두리-색상 : (펩시 메인컬러) */
+	border-style: solid; /* 테두리-선의종류 : 직선 */
+	border-width: 1px; /*테두리-두께: 1픽셀 */
+	margin-top: 20px;
+}
+.site-info {
+	text-align: center;
+	margin: 30px 0;
+}
+
+
+
+
+
+

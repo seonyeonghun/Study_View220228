@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>Dior</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<h1 class="d-none">Dior Korea</h1>
+	<header id="mobileHeader">
+		<div class="site-logo m-margin">
+			<img src="images/logo.png" alt="Dior Korea">
+		</div>
+		<div id="burger">
+			<span class="material-icons">
+				menu
+			</span>
+		</div>
+	</header>
+	<div class="mvideo-wrap">
+		<video src="video/intro.mp4" width="1280" height="720" controls loop><!-- controls : 재생 컨트롤 -->
+			<source src="video/intro.wmv" type="video/wmv">
+			<source src="video/intro.mov" type="video/mov">
+		</video>
+	</div>
+	<header>
+		<h1 class="d-none">dior 영상 배경과 로고, 검색창</h1>
+		<div class="logo-search">
+			<div class="site-logo">
+				<img src="images/logo.png" alt="Dior Korea">
+			</div>
+			<div class="search">
+				<form autocomplete="off">
+					<label for="keywords" class="d-none">검색어</label>
+					<input type="text" id="keywords" autofocus placeholder="jadore in joy 5% 할인쿠폰">
+					<input type="submit" id="search_bt" value="search">
+				</form>
+			</div>
+		</div>
+		<div class="video-wrap">
+			<video src="video/intro.mp4" width="1280" height="720" muted autoplay loop><!-- controls : 재생 컨트롤 -->
+				<source src="video/intro.wmv" type="video/wmv">
+				<source src="video/intro.mov" type="video/mov">
+			</video>
+		</div>
+	</header>
+	<nav>
+		<ul id="gnb"><!-- Global Navigation Bar : 막대 메뉴 -->
+			<li><a href="#">향수</a></li>
+			<li><a href="#">메이크업</a></li>
+			<li><a href="#">스킨케어</a></li>
+			<li>
+				<a href="#">브랜드소개</a>
+				<ul class="lnb"><!-- Local Navigation Bar -->
+					<li><a href="#">아이덴티티</a></li>
+					<li><a href="#">비하인드스토리</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">고객센터</a>
+				<ul class="lnb">
+					<li><a href="#">새소식</a></li>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">질문답변</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<section id="main">
+		<h2 class="d-none">best item &amp; user reviews</h2>
+		<article>
+			<h3 class="arti-title text-center">best item</h3>
+			<h3 class="d-none">2021 상품 베스트 컬렉션</h3>
+			<div class="best-items">
+				<div class="best-top">
+					<img src="images/best_img1.jpg" alt="perfume : best choice 2021">
+				</div>
+				<div class="best-second">
+					<img src="images/best_img2.jpg" alt="self wedding makeup kit">			
+				</div>
+				<div class="best-third">
+					<img src="images/best_img3.jpg" alt="essential kit">			
+				</div>
+				<ul class="d-none only-mobile">
+					<li><span>1</span></li>
+					<li><span>2</span></li>
+					<li><span>3</span></li>
+				</ul>
+			</div>
+		</article>
+		<article>
+			<h3 class="arti-title text-center black-text">reviews</h3>
+			<!--  p.106 figure, figcaption 태그 -->
+			<ul class="reviews-list">
+				<li>
+					<figure>
+						<img src="images/review_img1.jpg" alt="이용후기" />
+						<figcaption class="d-none">make_beauty2022님 이용후기</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/review_img2.jpg" alt="이용후기" />
+						<figcaption class="d-none">happtoday님 이용후기</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/review_img3.jpg" alt="이용후기" />
+						<figcaption class="d-none">homemade님 이용후기</figcaption>
+					</figure>
+				</li>
+			</ul>		
+		</article>
+	</section>
+	<footer class="text-center">
+		<div class="logo">
+			<a href="#">
+				<img src="images/footer_logo.png" alt="dior korea">
+			</a>
+		</div>
+		<ul class="links">
+			<li><a href="#">이용약관</a></li>
+			<li><a href="#">배송조회</a></li>
+			<li><a href="#">개인정보취급방침</a></li>
+		</ul>
+		<address>
+			<p>copyright&copy; 2017. <strong class="brand">dior</strong>. all rights reserved.</p>
+		</address>
+	</footer>
+	<script>
+	alert(screen.availWidth+" / "+screen.availHeight);
+     </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

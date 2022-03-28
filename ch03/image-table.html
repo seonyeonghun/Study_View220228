@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>이미지테이블</title>
+	<style>
+	.board, .board th, .board td {
+		border: 1px solid #333;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding: 15px 20px;
+		text-align: center;
+	}
+	.subject {
+		width: 350px;
+	}
+	</style>
+</head>
+<body>
+	<h1>p.88 테이블을 사용한 페이지 작성</h1>
+	<p>테이블은 텍스트, 이미지, 영상, 또다른 테이블등 대부분의 HTML요소를 포함할
+	수 있습니다.</p>
+	<table class="board">
+		<tr>
+			<th class="subject">이미지</th>
+			<th class="filename">이미지 파일명</th>
+			<th>용량(KB)</th>
+			<th>등록일</th>
+			<th>라이센스 유/무</th>
+			<th>다운로드</th>
+		</tr>		
+		<tr>
+			<td><img src="https://picsum.photos/id/1/200/250" alt="이미지"></td>
+			<td>picture1.png</td>
+			<td>2,045</td>
+			<td>22-03-09</td>
+			<td>free</td>
+			<td><a href="https://picsum.photos/id/1/200/250" download>다운로드</a></td>
+		</tr>		
+		<tr>
+			<td><img src="https://picsum.photos/id/12/200/250" alt="이미지"></td>
+			<td>picture2.png</td>
+			<td>4,045</td>
+			<td>22-03-09</td>
+			<td>free</td>
+			<td><a href="https://picsum.photos/id/12/200/250" download>다운로드</a></td>
+		</tr>		
+		<tr>
+			<td><img src="https://picsum.photos/id/23/200/250" alt="이미지"></td>
+			<td>picture3.png</td>
+			<td>5,045</td>
+			<td>22-03-10</td>
+			<td>free</td>
+			<td><a href="https://picsum.photos/id/23/200/250" download>다운로드</a></td>
+		</tr>		
+	</table>
+</body>
+</html>

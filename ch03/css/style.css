@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body { /* body 라는 태그의 스타일을 */
+	background-color: #808fed; /* 배경-색상 : 핑크 */
+	color: white; /* 글자색상 : 흰색 */
+}
+p {
+	margin: 5%;
+	padding: 5%;
+	background: #fff;
+	color: #de6449
+}
+p.title {
+	text-align: center; /* 텍스트-정렬 : 가로 가운데 */
+	background-color: #de6449;
+	padding: 15px 20px;
+	border-radius: 30px;
+	color: #fff;	
+}

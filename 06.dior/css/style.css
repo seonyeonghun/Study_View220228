@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+:root {
+	--main-color: #ffffff; /* white */
+	--sub-color: #FF0000;
+	--bg-color: #000000; /* black */
+	--basic-align: center;
+	--basic-font: 18px;
+	--margin-y: 2rem 1rem;
+	--padding-y: 2rem 1rem;
+	--always-black: black !important;
+}
+
+body {
+	color: var(--main-color);
+	background: var(--bg-color);	
+}
+
+a, a:link {
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+.d-none {
+	display: none;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+
+/* ============= header ================= */
+/* p.390 트랜스폼 - 개체의 이동, 회전, 확대/축소, 왜곡 속성 */
+header {
+	position: relative; /* body 말고 header가 가장 가까운 부모요소 지정 */
+	height: 720px;
+	overflow: hidden; /* x축 넘침 : 숨겨 */
+	
+}
+.logo-search {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translateX(-50%); /* webkit 기반 브라우저에게 transform 인식 */
+	-moz-transform: translateX(-50%); /* webkit 기반 브라우저에게 transform 인식 */
+	-ms-transform: translateX(-50%); /* webkit 기반 브라우저에게 transform 인식 */
+	-o-transform: translateX(-50%); /* webkit 기반 브라우저에게 transform 인식 */
+	transform: translate(-50%, -50%); /* 변형: 이동X축 */
+	z-index:1000;
+}
+.site-logo {
+	text-align: center;
+	margin: 0 0 1rem 0; /* 아래만 1rem(=16px) */
+}
+.search {
+	font-size: 0; /* 여백 없애기 위한 방법이긴 하나, 부작용 */
+}
+#keywords {
+	outline: none;
+	width: 300px;
+	height: 60px;
+	border-color: black;
+	text-indent: 1rem;
+	box-sizing: border-box; /* 박스크기(padding, border) vs 박스크기+패딩크기+보더크기(content-box) */
+	background: none; /* 수정사항 */
+}
+
+#keywords::placeholder { /* placeholder 텍스트 */
+	color: white;
+}
+/* #keywords:valid { 교재에서 페이지 확인 후
+	background: gold;
+} */
+#search_bt {
+	width: 100px;
+	height: 60px;
+	font-size: 16px;
+	background: var(--bg-color, skyblue); /* var(메인컬러, 보조컬러) */
+	color: var(--main-color);
+	border: 0;
+	text-transform: uppercase;
+}
+
+
+.video-wrap { /* 1080p, 720p */
+	width: 1280px;
+	height: 720px;
+	position: absolute;
+	transform: scale(1.5)
+}
+
+nav {
+	background: black;
+}
+
+/*
+a b : a의 자손 b를 찾는 선택자
+a > b : a의 자식 b를 찾는 선택자
+*/
+#gnb {
+	max-width: 1190px;
+	margin: 0 auto;
+	display: flex; /* block 방식의 flex vs inline-flex */
+	justify-content: center; /* 수평 : 가운데 */
+	align-items: center; /* 수직 : 가운데 */
+	text-align: center;
+}
+#gnb > li {
+	line-height: 40px;
+	height: 40px;
+	flex: 200px; /* 못해도 200px은 유지 */
+	position: relative;
+}
+
+#gnb > li:hover .lnb {
+	display: block;
+}
+.lnb {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+/* 	height: 250px; */
+	background: rgba(0,0,0,.5); /* 베이지색 */
+	color: var(--bg-color);
+}
+
+/* =================== section =================== */
+section {
+	background: var(--main-color);
+}
+
+.arti-title {
+	font-size: var(--basic-font);
+	color: var(--sub-color);
+	padding: var(--padding-y);
+	text-transform: uppercase;
+}
+.black-text {
+	color: var(--always-black)
+}
+
+.text-center {
+	text-align: var(--basic-align);
+}
+
+.best-items {
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: var(--bg-color)
+}
+.best-top {
+	float: left; /* 이미지 400x400*/
+}
+.best-top img, .best-second img, .best-third img{
+	transform: scale(1) translateX(0);
+	opacity: 1; /* 50% 선명 + 검정색 배경 (비쳐보이게) */
+	transition: all .3s; /* 모든 변화가 있는 속성을 0.3초간 트랜지션해 */
+}
+.best-top:hover img, .best-second:hover img, .best-third:hover img{
+	transform: scale(1.123) translateX(5%);
+	opacity: .5; /* 100% 선명 */
+}
+.best-top, .best-second, .best-third {
+	overflow: hidden;
+}
+
+.reviews-list {
+	display: flex; /* 기본, 가로정렬됨 */
+	justify-content: center;
+	column-gap: 20px; /* 플렉스 아이템 사이 간격 <-- grid 속성 */
+	padding: var(--padding-y)
+}
+.reviews-list li {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%; /* 정원의 비율 (가로,세로 1:1) */
+	overflow: hidden;
+}
+
+/* ========= footer ======== */
+.logo {
+	margin: var(--margin-y)
+}
+.logo img {
+	filter: brightness(150%);
+}
+.links {
+	display: flex;
+	justify-content: center;
+	column-gap: 15px;
+}
+
+#mobileHeader, .mvideo-wrap {
+	display: none;
+}
+
+/* ================= media query ============ */
+
+@media screen and (max-width: 550px) {
+	body {
+		background: var(--main-color)
+	}
+	header {
+		display: none;
+	}	
+	#mobileHeader {
+		display: block !important;
+		position: relative;
+		height: 70px;
+	}
+	#mobileHeader .m-margin {
+		padding: 0;
+		margin: 15px auto 0;	
+		height: 43px;
+		width: 110px;	
+	}
+	#mobileHeader .m-margin img {
+		max-width: 100%;
+	}
+	
+	#burger {
+		color: var(--bg-color);
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		transform: translateY(-50%)
+	}
+	nav { /* 모든 nav를 숨겨라 */
+		display: none;
+	}
+	.mvideo-wrap { /* 1080p, 720p */
+		width: 100%;
+		height: 220px;
+		display: block !important;
+		position: relative;
+	}
+	.mvideo-wrap video {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.best-items {
+		max-width: 100%;
+		width: 100%;
+		height: 200px;
+		background: none;
+	}
+	.best-items img {
+		max-width: 100%;
+	}
+	.best-items div {
+		display: none;
+	}
+	.best-second {
+		display: block !important;
+	}
+	.only-mobile {
+		margin:5px 0 0 0;
+		font-size: 0;
+		display: flex !important;;
+		justify-content: center;
+		column-gap: 20px;		
+	}
+	.only-mobile li {
+		width: 10px;
+		height: 10px;
+		background: #ccc;
+		border-radius: 50%;
+	}
+	.only-mobile li:nth-child(1){
+		background: tomato;
+	}
+}
+
+
+
+
+
+
+

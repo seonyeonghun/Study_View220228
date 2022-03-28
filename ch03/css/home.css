@@ -1,0 +1,89 @@
+@charset "UTF-8";
+html {
+	scroll-behavior: smooth; /* 스크롤-동작 : 부드럽게 */
+}
+.valign-top {
+	vertical-align: middle;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+
+.dummy {
+	height: 5000px;
+}
+.page-title {
+	text-align: center;
+	margin: 3rem 0;
+	padding-top: 1rem; /* -top, -right, -bottom, -left : 방향으로~ */
+	font-size: 2.250rem;
+	text-transform: capitalize; /* 텍스트-변형 : 첫글자 대문자 */
+}
+a {
+	text-decoration: none;
+	color: inherit; /* white는 모든 a를 흰색처리, 그러다보면 문제생김.. */
+}
+/* 
+	ul {...} : 모든 ul 스타일
+	ul.menu {...} : 모든 ul중 class="menu"인것의 스타일
+	ul .menu {...} : 모든 ul중 그 자손이 class="menu"인것의 스타일
+	.menu {...} : 어떤것이든 class="menu"인것의 스타일
+*/
+ul {
+	list-style: none;	
+}
+.tour-list {
+	list-style: disc; /* circle, square 중 하나 */
+	margin: 1rem;
+}
+.menu {
+	text-align: center;
+	background: #2a679c;
+	color: white; /* 글자 메뉴 색상 : 흰색 */
+}	
+.menu li {
+	margin: 20px 30px; /* 바깥 여백 : 상하 20px, 좌우 0 */
+	display: inline-block;
+}
+#cnt1, #cnt2, #cnt3 { /* , : 그룹 선택자 */
+	text-align: center;
+	font-size: 1.750rem; /* 글자-크기 : 기본크기 x 1.750 */
+	text-transform: capitalize; /* 텍스트-변형: 첫글자 대문자 */
+	margin-top: 2%;
+}
+.cnt-wrap { /* 프로필 내용을 감싸고 있는 div의 class 이름 */
+	margin: 2.5% 5%;
+	padding: 2.5%;
+}
+
+
+
+
+
+
+
+
+

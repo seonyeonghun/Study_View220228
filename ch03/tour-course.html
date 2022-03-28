@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>여행 버킷리스트</title>
+	<!-- 패비콘 이미지 -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/tour.png" />
+		
+	<!-- meta:vp+탭 : 스마트폰에서 잘 보이게 하는 코드?! -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--  구글 폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
+
+	<!-- 구글 폰트 아이콘 -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<style>
+		/* 전체(공용) 선택자 : 모든 기본 여백을 초기화 */
+		* { 
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: 'Nanum Gothic', sans-serif;
+		}
+		/* -------- 구글 폰트 아이콘 스타일 ------------------ */
+		.mr-1 {
+			margin-right: .5rem; /* 오른쪽-마진 : 1rem 만큼 */
+		}
+		.valign-top {
+			vertical-align: top; /* 세로 정렬: 윗쪽기준 */
+		}
+		.material-icons {
+		  font-family: 'Material Icons';
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 24px;  /* Preferred icon size */
+		  display: inline-block;
+		  line-height: 1;
+		  text-transform: none;
+		  letter-spacing: normal;
+		  word-wrap: normal;
+		  white-space: nowrap;
+		  direction: ltr;
+		
+		  /* Support for all WebKit browsers. */
+		  -webkit-font-smoothing: antialiased;
+		  /* Support for Safari and Chrome. */
+		  text-rendering: optimizeLegibility;
+		
+		  /* Support for Firefox. */
+		  -moz-osx-font-smoothing: grayscale;
+		
+		  /* Support for IE. */
+		  font-feature-settings: 'liga';
+		}
+		a {
+			text-decoration: none; /* 텍스트-꾸밈 : 안함 (밑줄 없음)*/
+			color: inherit; /* 색상 : (상속받아서 결정) */	
+		}
+		img { 
+			width: 400px;
+			height: 300px; 
+		}
+		.title {
+			border-top:1px solid orange; 
+			border-bottom:1px solid orange;
+			padding: 20px 0; 
+			padding-left: 10%;
+			font-size: 1.250em;}
+		#page-title {
+			font-size: 3em; 
+			text-align: center;
+			padding: 7% 0; 
+			background: url("https://previews.123rf.com/images/ioqs/ioqs1110/ioqs111000006/10823867-%E4%BC%9D%E7%B5%B1%E7%9A%84%E3%81%AA%E6%A0%BC%E5%AD%90%E7%B8%9E%E3%80%81%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%A7%E7%B9%B0%E3%82%8A%E8%BF%94%E3%81%97%E5%B8%82%E6%9D%BE%E6%A8%A1%E6%A7%98%E9%BB%84%E8%89%B2%E3%81%A8%E7%99%BD%E3%80%82.jpg"); 
+			color: white;
+			text-shadow: 1px 1px 10px #333; 
+			/* 글자 그림자 효과 */}
+		.item {
+			margin: 5% 10%;
+			overflow: hidden;
+			}
+		.item-image {
+			float: left;
+			width: 30%;
+			margin-right: 5%;
+			overflow: hidden;
+		}
+		.item-image img {
+			max-width: 100%; 
+		}
+		.item-content {
+			float: right;
+			width: 65%;
+		}
+		.item-content p {
+			margin-bottom: 30px;
+		}
+		b {
+			background: black;
+			color: white;
+			padding: 10px 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1 id="page-title">코로나가 끝나면 가보고 싶은 곳</h1>
+	<p class="title">해외</p>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>
+				<a href="#">
+					<span class="material-icons valign-top mr-1">
+						credit_card
+					</span>예매하기
+				</a>
+			</p>
+		</div>
+	</div>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>예매하기</p>
+		</div>
+	</div>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>예매하기</p>
+		</div>
+	</div>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>예매하기</p>
+		</div>
+	</div>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>예매하기</p>
+		</div>
+	</div>
+	<div class="item"><!-- div : division, divide 나누다, 구분하다 -->
+	    <div class="item-image">
+	    	<img src="https://picsum.photos/200/300" alt="Two Lovers Point">
+		</div>
+		<div class="item-content">
+			<p><b>괌(Guam)</b></p>
+			<p><i>미국(USA)</i></p>
+			<p>괌은 오세아니아의 미크로네시아 마리아나 제도에 있는 미국의 해외 속령이다. 차모로인들이 약 4000년 전에 이곳에 정착해 원주민이 되었다</p>
+			<p>예매하기</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>SNL : Saturday Night Life</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+	integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">	
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	
+	<h1 class="d-none">snl 웹사이트</h1>
+	<div class="popup" id="news1">
+		<h2>방송일정 변경 안내</h2>
+		<p>외주 방송제작사의 일정관련 변경이 아래와 같이 있을 예정입니다.</p>
+		<!-- javascript를 이용한 창 닫기 -->
+		<a href="#" id="btn-close">&times;</a>
+		<a href="#" onclick="closeWin1()">창닫기</a>
+	</div>
+	
+	<div class="popup" id="news2">
+		<h2>코로나19 확산에 따른 방역지침안내</h2>
+		<p>질병관리청에서 안내한 새로운 방역지침입니다. 방청시 참고해 주세요!!</p>
+		
+		<a href="#" onclick="closeWin2()">창닫기</a>
+	</div>
+	<header>
+		<h2 class="d-none">헤더컨텐츠 : 로고, 비주얼이미지, 전체메뉴</h2>
+		<div class="site-logo">
+			<a href="#"><img src="images/logo.jpg" alt="snl" /></a>
+		</div>
+		<div class="visual" id="key">
+			<img src="images/heroImg.jpg" alt="SNL 진행자 - 박진영">
+		</div>
+		<div class="nav bg-dark">
+			<ul id="gnb">
+				<li><a href="#">처음으로</a></li>
+				<li><a href="#">프로그램</a></li>
+				<li>
+					<a href="#">방청예약</a>
+					<ul class="lnb">
+						<li><a href="#">조회/수정</a></li>
+						<li><a href="#">예약하기</a></li>
+					</ul>
+				</li>
+				<li><a href="#">커뮤니티</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<section>
+		<h2 class="d-none">입장요금, 출연진</h2>
+		<article>
+			<h3 class="d-none">솔로, 커플 입장요금, 미성년자 입장불가 고지</h3>
+			<table class="fee">
+				<caption>입장요금 안내</caption>
+				<tr class="row-header">
+					<th>구분</th>
+					<th>솔로</th>
+					<th>커플</th>
+					<th>미성년자</th>
+				</tr>
+				<tr>
+					<td>입장료</td>
+					<td>20,000원</td>
+					<td>30,000원</td>
+					<td rowspan="3" class="warn">입장불가</td>
+				</tr>
+				<tr>
+					<td>부킹료</td>
+					<td>50,000원</td>
+					<td>10,000원</td>
+					<!-- <td>입장불가</td> -->
+				</tr>
+				<tr>
+					<td>합계</td>
+					<td>70,000원</td>
+					<td>40,000원</td>
+					<!-- <td>입장불가</td> -->
+				</tr>
+			</table>
+		</article>
+		
+		
+		<article>
+			<h3 class="d-none">요일별 출연진, 국경일 및 토일 휴무</h3>
+			<table class="cast">
+				<caption>요일별 출연진</caption>
+				<tr>
+					<th>월,화,수</th>
+					<td>신동엽, 이동건</td>
+				</tr>
+				<tr>
+					<th>목,금</th>
+					<td>박진영, 이지연</td>
+				</tr>
+				<tr>
+					<th>토,일</th>
+					<td>휴무</td>
+				</tr>
+			</table>
+		</article>
+	</section>
+	
+	<aside>
+		<h2 class="d-none">개인정보,이용약관,이메일수집거부</h2>
+		<div class="nav bg-none border-top">
+			<ul id="xnb" class="bg-gray"><!-- eXtra Navigation Bar -->
+				<li><a href="javascript:;">개인정보취급방침</a></li>
+				<li><a href="#" onclick="return false">무단이메일수집거부</a></li>
+				<li><a href="#">이용약관</a></li>
+			</ul>
+		</div>
+	</aside>
+	<div class="move-top">
+		<a href="#">
+			<span class="material-icons">
+				vertical_align_top
+			</span>
+		</a>
+	</div>
+	<footer>
+		<h2 class="d-none">소유권자, 개인정보책임자, 주소, 사이트이름</h2>
+		<div id="site-info" class="bg-dark text-white text-center py-5">
+			<p>copyright &copy; <strong class="upper" id="brand">snl</strong>. all rights reserved.</p>
+			<p>개인정보책임자 : 홍길동 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sequi.</p>
+		</div>
+	</footer>
+	<!-- 
+	<script src="script/main.js"></script>
+	-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+body {
+	font-family: "Roboto Condensed","Noto Sans KR"; /* 글꼴 */
+	color: #fff; /* 문자색상 */
+	font-size: 14px; /* 문자크기 */
+	background-color: #4f0600;
+}
+a, a:link {
+	text-decoration: none;
+	color: inherit;
+}
+.d-none {
+	display: none; /* 표시 : 안함 */
+}
+
+/* =============== header ================== */
+.header-container {
+	background: url("../images/pt2.png");
+}
+.header-top-container {
+	background: #fff; /* 로고 배경은 흰색!! */
+	border-bottom: 1px solid #ddd; /* 옅은 회색, 얇은 경계선 추가 */
+} 
+.header-top {
+	width: 1190px;
+	margin: 0 auto;
+}
+.header-top::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.site-logo {
+	float: left;
+}
+.top-links {
+	margin: 15px 0 0 0;
+	float: right;	
+	color: #666; /* #666666 ==> #666, #FF9933 ==> #F93 */
+	text-transform: capitalize; /* 첫 글자 대문자 */
+}
+.top-links a {
+	margin: 0 0 0 10px
+}
+
+.header-mid {
+	width: 1190px;
+	margin: 100px auto 0; /* 위100, 좌우auto, 아래 0 */
+	height: 365px;
+	position: relative;
+}
+.model {
+	position: absolute;
+	left: 0;
+	top: 0;
+} 
+.text-group {
+	position: absolute;
+	width: 710px;
+	height: 100%; /* 부모요소 높이의 100% 배율 */
+	left: 480px; /* 왼쪽: (에서 반대방향으로) 480px 지점 */
+}
+.text-group p {
+	position: absolute;
+}
+.text1 {
+	left: 200px;
+	top: 100px;
+	text-transform: capitalize;
+	font-size: 60px;
+	color: #000;
+}
+.text2 {
+	left: 200px;
+	top: 160px;
+	font-size: 60px;
+	color: #cf1600;
+}
+.text3 {
+	top: 160px;
+	left: 330px;
+	text-transform: capitalize;
+	font-size: 90px;
+	color: #000;	
+}
+
+.header-bottom {
+	background-color: #830e00;	
+	padding: 20px 0;
+}
+#gnb {
+	max-width: 1190px; /* 아무리 화면이 커도 1190이상 커지지 않게 (최대!),
+						반대로 화면이 1190이하면, 가로 100% 되도록 */
+	margin: 0 auto;
+	text-align: right;	
+}
+#gnb li {
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+#gnb li:hover { /* 마우스 포인터를 li에 hand over 했을때 */
+	color: #ffe400;
+}
+#gnb li a{
+	font-size: 16px;
+}
+
+/* =============== section ================== */
+/* --------------- main page ------------ */
+h3 { /* 모든 h3의 스타일을 아래와 같이 정의 */
+	text-align: center;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: bolder; /* 얼마나?! */
+	padding: 35px 0;
+	margin: 20px 0 0 0; /* 위20px, 나머지 0 */
+}
+
+.topic-content {
+	max-width: 1190px;
+	min-height: 245px;
+	margin: 30px auto;
+	background-color: gold;
+	background-image: url("../images/topic_bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll; /* fixed하면 어떻게 될까? */
+	background-size: cover; /* cover 하면 어떻게 될까? */
+	position: relative;
+}
+.topic-content h4 {
+	font-size: 28px;
+	color: #4f0600;
+	text-transform: capitalize; /* 첫글자 대문자 */
+	position: absolute;
+	right: 20%;
+	top: 15%;
+}
+.topic-content p {
+	font-size: 16px;
+	color: #000; /* black */
+	text-align: right;
+	position: absolute;
+	top: 30%;
+	right: 20%;
+}
+#moreBtn {
+	position: absolute;
+	right: 20%;
+	top: 55%;
+	height: 50px;
+	width: 150px;
+	background: #4f0600;
+	color: white;
+	border-radius: 30px; /* 모서리 둥글게 : ~정도 */	
+	border: 0;
+}
+#moreBtn .material-icons {
+	position: absolute;
+	top: 13px;
+}
+
+.container {
+	max-width: 1190px; /* 최대 1190px, 100% */
+	margin: 0 auto;
+	display: flow-root;
+}
+.container h4 {
+	background: #000;
+	color: #eee;
+	font-size: 18px;
+	height: 55px;
+	line-height: 55px; /* 행-높이(=행간) : (높이와 같으면) 수직중앙 */
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.sports, .member {
+	float: left;
+	width: calc(50% - 1px); /* 부모 크기의 1/2 */
+	font-size: 0;
+}
+.member {
+	margin-left: 2px;
+} 
+.sports img, .member img {
+	width: 100%;
+}
+.sports p, .member p {
+	background: white;
+	font-size: 15px;
+	color: black;
+	text-align: center;
+	padding: 40px 0;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background: #84514d;
+	margin: 50px 0;
+}
+
+/* ------------ registration page ----------- */
+#sub .sub-title {
+	text-align: center;
+	text-transform: capitalize;
+}
+.overlay {
+	display: none;
+}
+.pt-list {
+	font-size: 0; /* 이미지 아래 여백 생기는걸 해결 */
+}
+.pt-list::after { /* clearfix */
+	content: '';
+	display: block;
+	clear: both;
+}
+.pt-list > li {
+	width: calc(33.3333333333333% - 10px);
+	float: left;	
+}
+.pt-list > li:nth-child(2) {
+	margin: 0 15px;
+}
+.pt-list > li img {
+	max-width: 100%; /* 부모폭이 img 폭으로 (실제 이미지가 크면, 줄여서 맞춰!) */
+}
+.cover-detail {
+	background: white;
+	color: black;
+	font-size: 16px;
+}
+.cover-title {
+	font-size: 20px;
+	font-weight: bolder;
+	text-align: center;
+	padding: 15px 0;
+	color: #4f0600;
+}
+.cover-tag {
+	text-align: center;
+}
+.cover-tag li {
+	display: inline-block;
+	padding: 10px 15px;
+	background: #000;
+	color: #fff;
+	margin: 15px 10px;
+}
+/* ================= aside ================= */
+.ad {
+	position: fixed;
+	right: 10%; 
+	top: 10%;
+}
+
+
+/* ================= footer ================= */
+.logo-text {
+	text-align: center;
+	font-size: 20px;
+	text-transform: capitalize;
+	font-weight: bolder;
+	margin: 20px 0;
+}
+address {
+	text-align: center;
+	line-height: 1.7;
+	text-transform: capitalize;
+	margin: 0 0 50px 0; /* 아래만 50px 바깥 여백 */
+}
+
+
+
+
+
+
+
+
+
+/* =============== aside ================== */
+
+
+
+
+
+/* =============== footer ================== */
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>커플레이</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	<meta property="og:title" content="커플레이">
+	<meta property="og:site_name" content="couplay">
+	<meta property="og:url" content="https://couplay.com">
+	<meta property="og:description" content="커플레이, 남녀 커플 매칭 서비스 웹앱">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://couplay.com/common_imgs/opengraph.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/couplay.css?ver=20220317" />
+</head>
+<body>
+	<h1 class="d-none">커플레이, 스몰웨딩 물품/용품 판매/렌탈 서비스</h1>
+	<div class="reject-body d-none">
+		<h2>무단 이메일수집거부</h2>
+		<ul>
+			<li>개인정보보호법 24조 1항. 무단 이메일 수집거부</li>
+			<li>동법 25조 3항에 근거하여, 무단으로 이메일을 수집하는 자</li>
+			<li>어쩌고 저쩌구...... KISA 관련 내용!!</li>
+		</ul>
+	</div>
+	<!-- header+section#main+aside+footer -->
+	<header>
+		<!-- ul.top-links>li*4>a[href=#] -->
+		<ul class="top-links">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<li><a href="#">장바구니</a></li>
+			<li><a href="#">주문조회</a></li>
+		</ul>
+		<div class="brand-logo">
+			<a href="#">
+				<img src="images/logo.png" alt="커플레이">
+			</a>
+		</div>
+		<nav class="main-nav">
+			<ul id="gnb">
+				<li><a href="#">shopping</a></li>
+				<li><a href="#">sales</a></li>
+				<li><a href="#">event</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="slogan-text">
+		<h2>review</h2>
+		<p>이용후기</p>
+	</div>
+	<section id="sub">
+		<h2 class="d-none">이용후기, 웨딩 촬영 영상</h2>
+		<article>
+			<h3 class="article-title">이용후기</h3>
+			<!-- 유투브 : 스몰웨딩 영상 소스코드 복사 & 붙이기 -->
+			<div id="video1" class="d-none">
+				<div class="video-wrap">
+					<iframe width="917" height="516" src="https://www.youtube.com/embed/Wpt8tz4fHbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<a href="#" id="close" onclick="close_video()">닫기</a>
+				</div>
+			</div>
+			<ul class="review-list">
+				<li>
+					<img src="https://picsum.photos/id/237/200/300" alt="lorem picsum">
+					<p class="title"><a href="#" onclick="open_video()">나의 첫 스몰웨딩</a></p>
+					<p class="author">by flower22</p>
+				</li>
+				<li>
+					<img src="https://picsum.photos/id/237/200/300" alt="lorem picsum">
+					<p class="title"><a href="#">나의 첫 스몰웨딩</a></p>
+					<p class="author">by flower22</p>
+				</li>
+				<li>
+					<img src="https://picsum.photos/id/237/200/300" alt="lorem picsum">
+					<p class="title"><a href="#">나의 첫 스몰웨딩</a></p>
+					<p class="author">by flower22</p>
+				</li>
+				
+			</ul>			
+		</article>		
+	</section>
+	<aside>
+		<div class="aside-wrap">
+			<ul class="side-links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" onclick="rejection_email()">무단이메일수집거부</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">고객센터</a></li>
+			</ul>
+		</div>
+	</aside>
+	<footer>
+		<div class="footer-wrap">
+			<address>
+				<p>광주광역시 서구 경열로 3 (농성동 1234)</p>
+				<p>copyright&copy; 2017. <span class="brand">couplay</span>. all rights reserved.</p>
+			</address>
+		</div>
+	</footer>
+	<script src="script/main.js"></script>
+</body>
+</html>

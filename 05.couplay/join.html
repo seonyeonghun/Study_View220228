@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>커플레이</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	<meta property="og:title" content="커플레이">
+	<meta property="og:site_name" content="couplay">
+	<meta property="og:url" content="https://couplay.com">
+	<meta property="og:description" content="커플레이, 남녀 커플 매칭 서비스 웹앱">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://couplay.com/common_imgs/opengraph.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/couplay.css?ver=20220317" />
+</head>
+<body>
+	<h1 class="d-none">커플레이, 신개념 커플 매칭 서비스</h1>
+	<!-- header+section#main+aside+footer -->
+	<header>
+		<!-- ul.top-links>li*4>a[href=#] -->
+		<ul class="top-links">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<li><a href="#">장바구니</a></li>
+			<li><a href="#">주문조회</a></li>
+		</ul>
+		<div class="brand-logo">
+			<a href="#">
+				<img src="images/logo.png" alt="커플레이">
+			</a>
+		</div>
+		<nav class="main-nav">
+			<ul id="gnb">
+				<li><a href="#">shopping</a></li>
+				<li><a href="#">sales</a></li>
+				<li><a href="#">event</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="slogan-text">
+		<h2>join</h2>
+		<p>멤버쉽 등록</p>
+	</div>
+	<section id="main">
+		<article>
+			<h3 class="article-title">가입 구분</h3>
+			<form action="" method="post" autocomplete="off" name="joinForm">
+				<div class="membership-type"><!-- kebab-case 기법 -->
+					<table id="typeTable"><!-- camelCase 기법 -->
+						<tr>
+							<th>회원구분</th>
+							<td>
+								<label for="type1">개인회원</label>
+								<input type="radio" id="type1" name="type" checked>개인회원
+								<label for="type2">사업자회원</label>
+								<input type="radio" name="type">사업자회원
+							</td>
+						</tr>
+					</table>
+				</div>
+				<h3 class="article-title">기본정보</h3>
+				<div class="membership-info">
+					<table id="infoTable">
+						<tr>
+							<th>아이디</th>
+							<td>
+								<label for="userId">아이디</label>
+								<input type="text" id="userId" name="userId" maxlength="12" autofocus required>
+								<span class="caution">필수입력 항목입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td>
+								<label for="userPw">비밀번호</label>
+								<input type="password" id="userPw" name="userPw" maxlength="16" required>
+							</td>
+						</tr>
+						<tr>
+							<th>이름</th>
+							<td>
+								<label for="userName">이름</label>
+								<input type="text" id="userName" name="userName" maxlength="16" required>
+							</td>
+						</tr>
+						<tr>
+							<th>연락처</th>
+							<td>
+								<label for="userPhone">연락처</label>
+								<!-- <input type="tel" id="userPhone" name="userPhone" required placeholder="-없이 입력하세요"> -->
+								<select id="gukNum">
+									<option value="02">02</option>
+									<option value="062">062</option>
+									<option value="010" selected>010</option>
+									<option value="070">070</option>
+								</select>
+								-
+								<input type="text" id="midNum" maxlength="4">
+								-
+								<input type="text" id="lastNum" maxlength="4">							
+							</td>
+						</tr>
+						<tr>
+							<th>SMS수신여부</th>
+							<td>
+								<label for="userSms">수신함</label>
+								<input type="checkbox" id="userSms" name="userSms"><span class="sprite"></span>수신함
+							</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td>
+								<label for="userEmail">이메일</label>							
+								<!-- <input type="email" id="userEmail" name="userEmail" maxlength="32"> -->
+								
+								<input type="text" id="userEmailId" name="userEmail1">
+								@
+								<input type="text" id="userEmailDomain" name="userEmail2" placeholder="naver.com">
+								<select id="emailDomain" class="d-none">
+									<option value="naver.com">네이버</option>
+									<option value="daum.net">다음</option>
+									<option value="gmail.com">구글</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>프로필 사진</th>
+							<td>
+								<input type="text" id="fileName" name="fileName" disabled>							
+								<label for="userPhoto" id="find_photo">찾아보기</label>
+								<input type="file" id="userPhoto" name="userPhoto" class="d-none">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="btns">
+					<input type="submit" value="가입">
+					<input type="reset" value="취소">
+				</div>
+			</form>
+		</article>		
+	</section>
+	<aside>
+		<div class="aside-wrap">
+			<ul class="side-links">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">무단이메일수집거부</a></li>
+				<li><a href="#">개인정보취급방침</a></li>
+				<li><a href="#">고객센터</a></li>
+			</ul>
+		</div>
+	</aside>
+	<footer>
+		<div class="footer-wrap">
+			<address>
+				<p>광주광역시 서구 경열로 3 (농성동 1234)</p>
+				<p>copyright&copy; 2017. <span class="brand">couplay</span>. all rights reserved.</p>
+			</address>
+		</div>
+	</footer>
+	<script src="script/main.js"></script>
+</body>
+</html>
